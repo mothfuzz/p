@@ -2,16 +2,22 @@
 
 from random import randint
 
-cont = 'yes'
+cont = 'memes'
 pscore = 0
 cscore = 0
 
-while cont == 'yes':
+print('ROCK PAPER SCISSORS')
+print('enter \'stop\' to end the game')
+
+while cont == 'memes':
 
     player = input('rock, paper, or scissors? ')
 
-    while player != 'rock' and player != 'paper' and player != 'scissors':
+    while player != 'rock' and player != 'paper' and player != 'scissors' and player != 'stop':
         player = input('you must enter a valid choice! ')
+
+    if player == 'stop':
+        cont = 'stop'
 
     num = randint(1,3)
     if num == 1:
@@ -21,7 +27,8 @@ while cont == 'yes':
     else:
         comp = 'scissors'
 
-    print(player, 'vs', comp)
+    if player != 'stop':
+        print(player, 'vs', comp)
 
     if player == 'rock':
         if comp == 'paper':
@@ -51,10 +58,6 @@ while cont == 'yes':
 
     if player == comp:
         print('it\'s a draw!')
-
-    cont = input('play again? yes or no: ')
-    while cont != 'yes' and cont != 'no':
-        cont = input('you must enter yes or no! ')
         
 print('FINAL SCORES')
 print('you:', pscore, 'computer:', cscore)
