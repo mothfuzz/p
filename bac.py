@@ -72,7 +72,7 @@ while playAgain == 'yes':
 
     print('You win!')
     playAgain = input('Play again? (yes/no) ')
-    while playAgain != 'yes' or playAgain !='no':
+    while playAgain != 'yes' and playAgain !='no':
         playAgain = input('Please enter yes or no: ')
 
 print('Goodbye :)')
